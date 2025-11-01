@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Santanu Sahoo</title>
+  <link href="./output.css" rel="stylesheet" />
+</head>
+
+<body class="overflow-x-hidden dark:bg-darkThem dark:text-white">
+
+  <!-- ====== NAVBAR ====== -->
+  <nav
+    class="w-full fixed font-extrabold px-5 lg:px-8 py-4 flex items-center justify-between top-0 left-0 z-50 bg-transparent transition-colors duration-500">
+    <img src="lg-1-Photoroom.png" alt="logo" class="w-10 cursor-pointer mr-14 dark:hidden" />
+    <img src="lg-2-Photoroom.png" alt="logo" class="w-10 cursor-pointer mr-14 hidden dark:block" />
+
+    <ul
+      class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 shadow-sm dark:border dark:border-white/70 dark:bg-darkThem transition-all duration-500">
+      <li><a href="#home" onclick="showSection('home')" class="hover:text-blue-500 dark:hover:text-yellow-300 transition">Home</a></li>
+      <li><a href="#about" onclick="showSection('about')"
+          class="hover:text-blue-500 dark:hover:text-yellow-300 transition">About</a></li>
+      <li><a href="#skills" onclick="showSection('skills')"
+          class="hover:text-blue-500 dark:hover:text-yellow-300 transition">Skills</a></li>
+      <li><a href="#contact" onclick="showSection('contact')"
+          class="hover:text-blue-500 dark:hover:text-yellow-300 transition">Contact</a></li>
+    </ul>
+
+    <div class="flex items-center gap-2">
+      <button id="sd" onclick="toggleTheme()">
+        <img src="moon.png" alt="" class="w-10 dark:hidden" />
+        <img src="icons8-sun-50.png" alt="" class="w-12 hidden dark:block" />
+      </button>
+      <a href="#contact"
+        class="hidden lg:flex items-center gap-3 px-10 py-2.5 rounded-full ml-4 border border-gray-700 hover:bg-gray-300 dark:hover:bg-gray-700 transition">Contact</a>
+      <button class="w-10 md:hidden" onclick="openmenu()">
+        <img src="menu.png" alt="" class="dark:hidden" />
+        <img src="icons8-menu-bar-50.png" alt="" class="hidden dark:block" />
+      </button>
+    </div>
+
+    <!-- ====== MOBILE MENU ====== -->
+    <ul id="sidemenu"
+      class="flex md:hidden flex-col py-20 px-10 fixed top-0 right-[-16rem] h-screen w-64 z-50 transition-all duration-500 ease-in-out gap-6 shadow-lg rounded-lg">
+      <div class="flex justify-between items-center mb-6">
+        <span></span>
+        <div class="cursor-pointer" onclick="closemenu()">
+          <img src="multiply-mathematical-sign.png" alt="" class="hidden dark:block w-6 h-6">
+          <img src="cross.png" alt="" class="w-6 h-6 dark:hidden">
+        </div>
+      </div>
+      <li><a href="#home" onclick="showSection('home')"
+          class="hover:text-blue-600 dark:hover:text-yellow-300 transition">Home</a></li>
+      <li><a href="#about" onclick="showSection('about')"
+          class="hover:text-blue-600 dark:hover:text-yellow-300 transition">About</a></li>
+      <li><a href="#skills" onclick="showSection('skills')"
+          class="hover:text-blue-600 dark:hover:text-yellow-300 transition">Skills</a></li>
+      <li><a href="#contact" onclick="showSection('contact')"
+          class="hover:text-blue-600 dark:hover:text-yellow-300 transition">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ====== HOME SECTION ====== -->
+  <section id="home" class="section pt-20 text-center animate-fadeIn">
+    <img src="ss-3.jpg" alt="Santanu Photo" class="rounded-full w-32 mx-auto mt-20 shadow-lg" />
+    <h1 class="text-4xl font-bold mt-6 animate-fadeInUp">Hi, I’m Santanu Sahoo</h1>
+    <p class="max-w-3xl mx-auto mt-4 text-gray-700 dark:text-gray-300 animate-fadeInUp delay-150">
+      Hi, I’m Santanu Sahoo, a passionate Data Scientist skilled in uncovering insights, building predictive models,
+      and turning data into actionable solutions.
+    </p>
+  </section>
+
+  <!-- ====== ABOUT SECTION ====== -->
+  <section id="about" class="section hidden w-full px-[12%] py-20 scroll-mt-20 animate-fadeIn">
+    <h2 class="text-center text-5xl mb-10 font-extrabold animate-fadeInDown">About Me</h2>
+    <div class="flex flex-col lg:flex-row items-center gap-20">
+      <div class="max-w-max mx-auto relative animate-fadeInLeft">
+        <img src="sd-1-Photoroom.png" alt="" class="w-64 sm:w-80 rounded-3xl max-w-none shadow-lg" />
+      </div>
+      <div class="flex-1 text-center lg:text-left animate-fadeInRight">
+        <h1 class="my-4 font-semibold text-gray-700 dark:text-white">SANTANU SAHOO</h1>
+        <p class="dark:text-gray-300">17TH CSE (2024–28) at IGIT, SARANG</p>
+        <ul class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl mt-6 mx-auto lg:mx-0">
+          <li
+            class="border-[0.5px] border-gray-900 rounded-xl p-6 hover:bg-blue-300 dark:hover:bg-purple-800 transition">
+            Projects: TIC-TAC-TOE, Weather Website, Portfolio Website
+          </li>
+          <li
+            class="border-[0.5px] border-gray-900 rounded-xl p-6 hover:bg-blue-200 dark:hover:bg-purple-700 transition">
+            Education: BTech, Computer Science Engineering
+          </li>
+          <li
+            class="border-[0.5px] border-gray-900 rounded-xl p-6 hover:bg-blue-200 dark:hover:bg-purple-600 transition">
+            Languages: HTML, CSS, JavaScript
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SKILLS SECTION ====== -->
+  <section id="skills"
+    class="section hidden w-full px-[12%] py-20 scroll-mt-20 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-gray-900 dark:to-gray-800 transition-colors duration-700 animate-fadeIn">
+    <h2 class="text-center text-5xl mb-12 font-extrabold text-gray-900 dark:text-white animate-fadeInDown">My Skills</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+      <!-- Skill Card -->
+      <div
+        class="dark:bg-gray-800 p-6 rounded-2xl shadow-lg hover:scale-105 hover:shadow-2xl transition transform duration-500 animate-fadeInUp">
+        <h3 class="text-xl font-semibold mb-4 text-gray-800 dark:text-white">Python</h3>
+        <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-4">
+          <div class="bg-blue-500 h-4 rounded-full w-[90%] transition-all duration-1000 ease-in-out"></div>
+        </div>
+        <p class="text-gray-700 dark:text-gray-200 mt-2 text-sm">
+          90% proficiency in Python for data analysis and ML projects
+        </p>
+      </div>
+
+      <div
+        class="dark:bg-gray-800 p-6 rounded-2xl shadow-lg hover:scale-105 hover:shadow-2xl transition transform duration-500 animate-fadeInUp delay-150">
+        <h3 class="text-xl font-semibold mb-4 text-gray-800 dark:text-white">Machine Learning</h3>
+        <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-4">
+          <div class="bg-green-500 h-4 rounded-full w-[85%] transition-all duration-1000 ease-in-out"></div>
+        </div>
+        <p class="text-gray-700 dark:text-gray-200 mt-2 text-sm">
+          Experience building predictive models and classification systems
+        </p>
+      </div>
+
+      <div
+        class="dark:bg-gray-800 p-6 rounded-2xl shadow-lg hover:scale-105 hover:shadow-2xl transition transform duration-500 animate-fadeInUp delay-300">
+        <h3 class="text-xl font-semibold mb-4 text-gray-800 dark:text-white">SQL</h3>
+        <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-4">
+          <div class="bg-yellow-500 h-4 rounded-full w-[80%] transition-all duration-1000 ease-in-out"></div>
+        </div>
+        <p class="text-gray-700 dark:text-gray-200 mt-2 text-sm">Querying and managing databases efficiently</p>
+      </div>
+
+      <div
+        class="dark:bg-gray-800 p-6 rounded-2xl shadow-lg hover:scale-105 hover:shadow-2xl transition transform duration-500 animate-fadeInUp delay-450">
+        <h3 class="text-xl font-semibold mb-4 text-gray-800 dark:text-white">Power BI</h3>
+        <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-4">
+          <div class="bg-purple-500 h-4 rounded-full w-[75%] transition-all duration-1000 ease-in-out"></div>
+        </div>
+        <p class="text-gray-700 dark:text-gray-200 mt-2 text-sm">Data visualization and dashboard creation</p>
+      </div>
+
+      <div
+        class="dark:bg-gray-800 p-6 rounded-2xl shadow-lg hover:scale-105 hover:shadow-2xl transition transform duration-500 animate-fadeInUp delay-600">
+        <h3 class="text-xl font-semibold mb-4 text-gray-800 dark:text-white">TailwindCSS</h3>
+        <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-4">
+          <div class="bg-pink-500 h-4 rounded-full w-[85%] transition-all duration-1000 ease-in-out"></div>
+        </div>
+        <p class="text-gray-700 dark:text-gray-200 mt-2 text-sm">Designing modern, responsive web layouts</p>
+      </div>
+
+      <div
+        class="dark:bg-gray-800 p-6 rounded-2xl shadow-lg hover:scale-105 hover:shadow-2xl transition transform duration-500 animate-fadeInUp delay-750">
+        <h3 class="text-xl font-semibold mb-4 text-gray-800 dark:text-white">JavaScript</h3>
+        <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-4">
+          <div class="bg-indigo-500 h-4 rounded-full w-[80%] transition-all duration-1000 ease-in-out"></div>
+        </div>
+        <p class="text-gray-700 dark:text-gray-200 mt-2 text-sm">Dynamic web functionality and front-end scripting</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====== CONTACT SECTION ====== -->
+  <section id="contact"
+    class="section w-full px-[12%] py-20 scroll-mt-20 bg-[url('./photo/bg.png')] bg-no-repeat bg-[length:90%_auto] bg-center animate-fadeIn">
+    <h4 class="text-center mb-2 text-lg">Connect with me</h4>
+    <h2 class="text-center text-5xl mb-10">Get in touch</h2>
+    <p class="text-center max-w-2xl mx-auto mt-5 mb-12">Feel free to contact me using the form below or via email.</p>
+
+    <form method="post" action="https://api.web3forms.com/submit" class="max-w-2xl mx-auto">
+      <input type="hidden" name="access_key" value="9a6f81a7-0f98-45c4-a58d-e59b55eb94bf" />
+      <div class="grid grid-cols-2 gap-6 mt-10 mb-8">
+        <input type="text" placeholder="Enter your name"
+          class="flex-1 p-3 outline-none border border-[0.5px] border-gray-400 rounded-md" required name="name">
+        <input type="email" placeholder="Enter your Email"
+          class="flex-1 p-3 outline-none border border-[0.5px] border-gray-400 rounded-md" required name="email">
+      </div>
+      <textarea rows="6" placeholder="Enter your message"
+        class="w-full p-4 outline-none border-[0.5px] border-gray-700 rounded-md mb-6 bg-[url('./bg.png')] bg-cover dark:bg-none"
+        required name="message"></textarea>
+      <button type="submit"
+        class="py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-black rounded-full mx-auto hover:bg-slate-500 dark:bg-transparent dark:border dark:border-white/50 dark:hover:bg-back transition">
+        Submit now
+      </button>
+    </form>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <div class="mt-20 animate-fadeInUp">
+    <div class="text-center">
+      <div class="w-max flex items-center gap-2 mx-auto">
+        <img src="mail.png" alt="" class="w-6 dark:hidden">
+        <img src="icons8-email-50.png" alt="" class="w-6 hidden dark:block">
+        santanu.rdx45@gmail.com
+      </div>
+      <div class="text-center sm:flex items-center justify-between border-t border-gray-700 mx-[10%] mt-12 py-6">
+        <p></p>
+        <ul class="flex items-center gap-10 justify-center mt-4 sm:mt-0">
+          <li><a href="https://www.instagram.com/santanu_sahoo_111/"><img src="instagram.png" alt="" class="w-8">Instagram</a></li>
+          <li><a href="https://www.facebook.com/santanu sahoo"><img src="facebook.png" alt="" class="w-8">Facebook</a></li>
+          <li><a href="https://www.linkedin.com/in/santanu sahoo/"><img src="linkedin.png" alt="" class="w-8">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

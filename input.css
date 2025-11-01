@@ -1,0 +1,157 @@
+
+
+@import "tailwindcss";
+
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+ @theme {
+  --color-*: initial;
+  --color-white: #fff;
+  --color-purple: #3f3cbb;
+  --color-midnight: #121063;
+  --color-tahiti: #3ab7bf;
+  --color-bermuda: #78dcca;
+  --color-back:#081b29;
+  --color-darkThem:#11001F;
+
+} 
+
+@theme {
+  --animate-p-spin: p-spin 10s linear infinite;
+
+}
+
+@keyframes p-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}  
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 1s ease forwards;
+}
+
+.animate-fadeInDown {
+  animation: fadeInDown 1s ease forwards;
+}
+
+.delay-150 { animation-delay: 0.15s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-450 { animation-delay: 0.45s; }
+.delay-600 { animation-delay: 0.6s; }
+.delay-750 { animation-delay: 0.75s; }
+
+
+/* ===== Custom Animations ===== */
+@layer utilities {
+  /* Fade in up */
+  @keyframes fade-up {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-up {
+    animation: fade-up 1s ease-out forwards;
+  }
+
+  /* Bounce scale */
+  @keyframes bounce-scale {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+  .animate-bounce-scale {
+    animation: bounce-scale 1s infinite;
+  }
+
+  /* Progress bar loading */
+  @keyframes progress-load {
+    0% { width: 0; }
+    100% { width: var(--progress-width); }
+  }
+  .animate-progress {
+    animation: progress-load 1.5s ease-out forwards;
+  }
+
+  /* Glow hover effect */
+  .hover-glow:hover {
+    box-shadow: 0 0 15px rgba(255,255,255,0.5);
+    transform: scale(1.03);
+    transition: all 0.3s ease;
+  }
+}
+
+/* Example skill bar custom property */
+.skill-python { --progress-width: 90%; }
+.skill-ml { --progress-width: 85%; }
+.skill-sql { --progress-width: 80%; }
+.skill-powerbi { --progress-width: 75%; }
+.skill-tailwind { --progress-width: 85%; }
+.skill-js { --progress-width: 80%; }
+
+
+
+/* ====== ANIMATIONS ====== */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInDown {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInLeft {
+  0% { opacity: 0; transform: translateX(-20px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeInRight {
+  0% { opacity: 0; transform: translateX(20px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-fadeInUp { animation: fadeInUp 1s ease forwards; }
+.animate-fadeInDown { animation: fadeInDown 1s ease forwards; }
+.animate-fadeInLeft { animation: fadeInLeft 1s ease forwards; }
+.animate-fadeInRight { animation: fadeInRight 1s ease forwards; }
+.animate-fadeIn { animation: fadeInUp 1s ease forwards; }
+.animate-gradientBG {
+  background-size: 200% 200%;
+  animation: gradientBG 10s ease infinite;
+}
+.delay-150 { animation-delay: 0.15s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-450 { animation-delay: 0.45s; }
+.delay-600 { animation-delay: 0.6s; }
+.delay-750 { animation-delay: 0.75s; }
+
+/* ====== CUSTOM COLORS ====== */
+:root {
+  --darkThem: #111827;
+  --primaryBlue: #3b82f6;
+  --secondaryPurple: #7c3aed;
+}
